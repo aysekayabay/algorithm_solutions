@@ -59,7 +59,7 @@ public:
         return head;
     }
 
-    ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) // loved this solution (recursion)
+    ListNode *addTwoNumbersV2(ListNode *l1, ListNode *l2) // loved this solution (recursion)
     {
         if (!l1)
         {
@@ -82,9 +82,9 @@ public:
             l1->val -= 10;
         }
         if (l2) // Repeat the process for the remaining digits
-            l1->next = addTwoNumbers(l1->next, l2->next);
+            l1->next = addTwoNumbersV2(l1->next, l2->next);
         else
-            l1->next = addTwoNumbers(l1->next, NULL);
+            l1->next = addTwoNumbersV2(l1->next, NULL);
 
         return l1;
     }
