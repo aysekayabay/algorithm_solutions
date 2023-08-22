@@ -18,10 +18,7 @@ int romanToInt(string s)
                 number += 9;
                 i++;
             }
-            else
-            {
-                number++;
-            }
+            else number++;
             break;
         case 'V':
             number += 5;
@@ -37,10 +34,7 @@ int romanToInt(string s)
                 number += 90;
                 i++;
             }
-            else
-            {
-                number += 10;
-            }
+            else number += 10;
             break;
         case 'L':
             number += 50;
@@ -56,10 +50,7 @@ int romanToInt(string s)
                 number += 900;
                 i++;
             }
-            else
-            {
-                number += 100;
-            }
+            else number += 100;
             break;
         case 'D':
             number += 500;
