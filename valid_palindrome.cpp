@@ -2,7 +2,8 @@
 #include <cctype>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
     bool isPalindrome(string s)
     {
@@ -16,7 +17,7 @@ public:
         }
 
         int start = 0;
-        int end = newString.length()- 1;
+        int end = newString.length() - 1;
 
         while (start < end)
         {
@@ -28,7 +29,6 @@ public:
             start++;
             end--;
         }
-
         return true;
     }
 };
