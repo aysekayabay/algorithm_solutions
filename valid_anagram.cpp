@@ -3,10 +3,7 @@ class Solution
 public:
     bool isAnagram(string s, string t)
     {
-        if (s.length() != t.length())
-        {
-            return false;
-        }
+        if (s.length() != t.length()) return false;
         int count[256] = {0};
         for (char c : s)
         {
@@ -16,14 +13,9 @@ public:
         while (i < t.length())
         {
             count[t[i] - 'a']--;
-            if (count[t[i] - 'a'] < 0)
-            {
-                return false;
-            }
-
+            if (count[t[i] - 'a'] < 0) return false;
             i++;
         }
-
         return true;
     }
 };
