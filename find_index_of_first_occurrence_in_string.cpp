@@ -6,11 +6,9 @@ public:
         int h = haystack.size();
         int n = needle.size();
 
-        if (n == 0)
-            return 0;
+        if (n == 0) return 0;
 
         map<char, int> badChar;
-
         for (int i = 0; i < n; i++)
         {
             badChar[needle[i]] = i;
@@ -26,14 +24,10 @@ public:
                 j--;
             }
 
-            if (j < 0)
-            {
-                return i;
-            }
+            if (j < 0) return i;
             else
-            {
                 i += max(1, j - badChar[haystack[i + j]]);
-            }
+            
         }
         return -1;
     }
